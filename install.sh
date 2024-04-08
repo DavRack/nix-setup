@@ -2,6 +2,7 @@
 
 system=$(uname -o)
 
+# install nix
 command=$(curl -V > /dev/null && echo "curl -L" || echo "wget -O -")
 url="https://nixos.org/nix/install"
 
@@ -13,3 +14,7 @@ if [ $system == "GNU/Linux" ]; then
 elif [ $system == "Darwin" ]; then
   sh <(eval $install_command)
 fi
+
+# install home-manager
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
