@@ -9,7 +9,7 @@ install_command="$command $url"
 
 
 if [ $system == "GNU/Linux" ]; then
-  sh <(curl -L https://nixos.org/nix/install) --daemon
+  sh <(eval $install_command) --daemon
 elif [ $system == "Darwin" ]; then
-  sh <(curl -L https://nixos.org/nix/install)
+  sh <(eval $install_command)
 fi
