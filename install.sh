@@ -18,10 +18,10 @@ fi
 mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
-bash
+source ~/.bashrc
 # install home-manager
+ln -s ~/nix-setup/home-manager ~/.config/
+
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 nix-shell '<home-manager>' -A install
-
-ln -s ~/nix-setup/home-manager ~/.config/
