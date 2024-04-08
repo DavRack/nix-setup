@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -66,7 +66,7 @@
     # '';
   };
 
-  home.activation.setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
       echo "setup nvim config"
       ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
   '';
