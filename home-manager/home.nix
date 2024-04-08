@@ -67,7 +67,7 @@
   };
 
   home.activation = {
-    setupNvim = ''
+    setupNvim = dagEntryAfter ["writeBoundary"] ''
       ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
     '';
   };
