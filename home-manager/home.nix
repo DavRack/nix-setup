@@ -66,7 +66,7 @@
     # '';
   };
 
-  home.activation.setupNvim = dagEntryAfter ["writeBoundary"] ''
+  home.activation.setupNvim = ''
       ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
   '';
 
