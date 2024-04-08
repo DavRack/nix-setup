@@ -55,7 +55,6 @@
     };
     ".config/nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-setup/dotfiles/nvim";
-      recursive = true;
     };
     ".config/.zshrc" = {
       source = ../dotfiles/.zshrc;
