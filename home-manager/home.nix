@@ -34,7 +34,7 @@
     pkgs.rust-analyzer
     pkgs.tmux
     pkgs.tree
-		pkgs.npm
+    pkgs.npm
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
