@@ -53,7 +53,7 @@
       source = ../dotfiles/btop;
       recursive = true;
     };
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/david/nix-setup/dotfiles/nvim";
+    # ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/david/nix-setup/dotfiles/nvim";
     ".config/.zshrc" = {
       source = ../dotfiles/.zshrc;
       recursive = true;
@@ -64,6 +64,12 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+  };
+
+  home.activation = {
+    setupNvim = ''
+      ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
+    '';
   };
 
   # Home Manager can also manage your environment variables through
