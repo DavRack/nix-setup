@@ -67,7 +67,7 @@
   };
 
   home.activation.setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf /home/david/nix-setup/dotfiles/nvim ~/nvim
+      ln -sf /home/david/nix-setup/dotfiles/nvim ~/.config/nvim
   '';
 
   # Home Manager can also manage your environment variables through
