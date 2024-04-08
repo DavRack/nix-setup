@@ -18,10 +18,6 @@ fi
 mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
-source ~/.bashrc
-# install home-manager
-ln -s ~/nix-setup/home-manager ~/.config/
+bash <(eval "$command raw.githubusercontent.com/DavRack/nix-setup/master/home_manager_install.sh")
 
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-nix-shell '<home-manager>' -A install
+# u="raw.githubusercontent.com/DavRack/nix-setup/master/install.sh"; sh <(curl -L $u || wget -O - $u)
