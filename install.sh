@@ -24,4 +24,4 @@ nix-channel --add https://github.com/nix-community/home-manager/archive/master.t
 nix-channel --update
 nix-shell '<home-manager>' -A install
 
-ln -s ~/nix-setup/home-manager ~/.config/home-manager
+ln -s ~/nix-setup/home-manager ~/.config/
