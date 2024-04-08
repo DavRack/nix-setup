@@ -55,7 +55,7 @@
       recursive = true;
     };
     ".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/nvim";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.dotfiles}/nvim";
       recursive = true;
     };
     ".config/.zshrc" = {
