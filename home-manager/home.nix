@@ -19,21 +19,21 @@
   # environment.
   home.packages = [
     # pkgs is the set of all packages in the default home.nix implementation
-    pkgs.tmux
-    pkgs.coreutils-full
-    pkgs.neovim
-    pkgs.fd
-    pkgs.ripgrep
+		pkgs.gcc
     pkgs.btop
-    pkgs.fzf
-    pkgs.git
+    pkgs.coreutils-full
     pkgs.curl
-    pkgs.tree
     pkgs.docker
     pkgs.exiftool
+    pkgs.fd
+    pkgs.fzf
+    pkgs.git
+    pkgs.neovim
     pkgs.python3
+    pkgs.ripgrep
     pkgs.rust-analyzer
-		pkgs.gcc
+    pkgs.tmux
+    pkgs.tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -43,6 +43,10 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".config/alacritty" = { source = ../dotfiles/alacritty; recursive = true; };
+    ".config/btop" = { source = ../dotfiles/btop; recursive = true; };
+    ".config/nvim" = { source = ../dotfiles/nvim; recursive = true; };
+    ".config/.zshrc" = { source = ../dotfiles/.zshrc; recursive = true; };
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
