@@ -66,7 +66,7 @@
     # '';
   };
 
-  setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
       echo "setup nvim config"
       ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
   '';
