@@ -20,6 +20,8 @@
   home.packages = [
     # pkgs is the set of all packages in the default home.nix implementation
     pkgs.gcc
+    pkgs.go
+    pkgs.cargo
     pkgs.jq
     pkgs.gnumake
     pkgs.cmake
