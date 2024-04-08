@@ -14,6 +14,10 @@ if [ $system == "GNU/Linux" ]; then
 elif [ $system == "Darwin" ]; then
   sh <(eval $install_command)
 fi
+
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+
 bash
 # install home-manager
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
