@@ -66,11 +66,9 @@
     # '';
   };
 
-  home.activation = {
-    setupNvim = dagEntryAfter ["writeBoundary"] ''
+  home.activation.setupNvim = dagEntryAfter ["writeBoundary"] ''
       ln -s /home/david/nix-setup/dotfiles/nvim ~/nvim
-    '';
-  };
+  '';
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
