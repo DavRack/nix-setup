@@ -53,9 +53,7 @@
       source = ../dotfiles/btop;
       recursive = true;
     };
-    ".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-setup/dotfiles/nvim";
-    };
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/david/nix-setup/dotfiles/nvim";
     ".config/.zshrc" = {
       source = ../dotfiles/.zshrc;
       recursive = true;
