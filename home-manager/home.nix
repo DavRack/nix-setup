@@ -20,6 +20,10 @@
   home.packages = [
     # pkgs is the set of all packages in the default home.nix implementation
     pkgs.gcc
+    pkgs.jq
+    pkgs.gnumake
+    pkgs.cmake
+    pkgs.silver-searcher
     pkgs.zsh
     pkgs.btop
     pkgs.coreutils-full
