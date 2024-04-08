@@ -1,4 +1,5 @@
 #!/bin/bash
+# u="https://raw.githubusercontent.com/DavRack/nix-setup/master/install.sh"; bash <(curl -L $u || wget -O - $u)
 
 system=$(uname -o)
 
@@ -18,6 +19,4 @@ fi
 mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
-bash <(eval "$command raw.githubusercontent.com/DavRack/nix-setup/master/home_manager_install.sh")
-
-# u="raw.githubusercontent.com/DavRack/nix-setup/master/install.sh"; sh <(curl -L $u || wget -O - $u)
+bash <(eval "$command https://raw.githubusercontent.com/DavRack/nix-setup/master/home_manager_install.sh")
