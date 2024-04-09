@@ -77,10 +77,6 @@
   };
 
   home.activation = {
-    reloadFonts = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      fc-cache -f
-    '';
-
     setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf /home/david/nix-setup/dotfiles/nvim ~/.config/nvim
     '';
