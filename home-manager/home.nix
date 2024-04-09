@@ -43,7 +43,6 @@
     pkgs.tree
     pkgs.zsh
     pkgs.nerdfonts
-    pkgs.dejavu_fonts
   ];
 
   fonts.fontconfig.enable = true;
