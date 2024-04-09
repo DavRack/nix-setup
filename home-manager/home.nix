@@ -43,6 +43,7 @@
     pkgs.tree
     pkgs.zsh
     pkgs.nerdfonts
+    pkgs.fontconfig
   ];
 
   fonts.fontconfig.enable = true;
