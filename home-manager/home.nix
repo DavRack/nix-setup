@@ -42,7 +42,11 @@
     pkgs.tmux
     pkgs.tree
     pkgs.zsh
+    pkgs.nerdfonts
+    pkgs.dejavu_fonts
   ];
+
+  fonts.fontconfig.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -72,9 +76,15 @@
     # '';
   };
 
-  home.activation.setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation = {
+    setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf /home/david/nix-setup/dotfiles/nvim ~/.config/nvim
-  '';
+    '';
+
+    reloadFonts = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      fc-cache -f
+    '';
+  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
