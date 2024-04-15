@@ -1,0 +1,4 @@
+#!/bin/bash
+
+desktop=$(bspc query -D -d --names | cut -c1-1)
+bspc desktop -f "$desktop$1"

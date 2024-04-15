@@ -1,0 +1,95 @@
+XF86AudioMute
+    amixer -D pulse sset Master toggle -q
+XF86AudioRaiseVolume 
+    amixer -q -M set Master 5%+
+XF86AudioLowerVolume 
+    amixer -q -M set Master 5%-
+# F20
+#     amixer set Capture toggle
+# XF86AudioPlay 
+#     playerctl play-pause  
+# XF86AudioNext 
+#     playerctl next  
+# XF86AudioPrev 
+#     playerctl previous  
+super+b
+    light -A 5
+
+super+shift+b
+    light -U 5
+
+# aplicaciones
+super+Return 
+    $TERMINAL
+
+super+space 
+    $HOME/.config/rofi/launch.sh
+
+super+q
+    nautilus
+
+super+w 
+    brave
+
+super+e 
+    flameshot gui
+
+super+r 
+    flameshot full -p ~/multimedia/imagenes/capturas
+
+#bspwm
+super+z
+    bspc node -t \~fullscreen
+
+# restart bspwm
+super+shift+r
+    bspc wm -r
+
+super+g
+    bspc config window_gap {0, 12}
+
+# create new desktop
+super+n
+    bmm -n current
+
+# kill window
+super+x
+    xdo close
+
+super+f
+    bspc node focused -t floating
+
+super+shift+f
+    bspc node focused -t tiled
+
+# focus windows
+super+{h, j, k, l}
+    bspc node -f {west,south,north,east}
+
+# move windows
+super+shift+{h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+# expand windows
+super+ctrl+{h, j, k, l}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
+
+# send window to desktop
+super+m
+    $HOME/.config/sxhkd/moveWindowTo
+
+super+shift+m
+    bmm -na
+
+super+{u, i}
+    bspc desktop -f {prev,next}.local
+
+super+{a,s,d}
+    bspc monitor -f %{$monitor0,$monitor1,$monitor2}
+
+# start pomodoro
+super+p
+    $TERMINAL -o font.size=40 -e pomo start -p 20 -d 50m "Trabajar"

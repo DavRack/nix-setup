@@ -1,0 +1,58 @@
+#!/bin/bash
+# vars
+. $HOME/.config/vars
+
+#hotkeys
+relaunch sxhkd &
+
+# control media players
+playerctld daemon
+
+# # limpiar reglas al reiniciar 
+bspc rule -r "*"
+
+# polybar
+~/.config/polybar/launch.sh
+
+bspc config border_width         2
+bspc config normal_border_color "#222"
+bspc config active_border_color "#555"
+bspc config window_gap          12
+if [ "$bar_bottom"="true" ]; then
+  bspc config bottom_padding         "$bar_size"
+else
+  bspc config top_padding         "$bar_size"
+fi
+
+bspc config split_ratio          0.52
+bspc config single_monocle       true
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+#if [ ! -f /tmp/currentDockState ]; then
+#    dockstate -a
+#fi
+
+# llenar monitores vacios
+bmm -f
+
+# eliminar desktops vacios
+bmm -d
+
+# acciones a ejecutar cuando bspwm muta
+killall autoDesktopClean; autoDesktopClean &
+
+## # fondo de pantalla
+#feh --bg-fill ~/multimedia/imagenes/wall/wall.*
+
+## reiniciar las aplicaciones
+# relaunch picom &
+
+# integración con gnome
+relaunch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# relaunch gnome-flashback &
+gsettings set org.gnome.gnome-flashback desktop false &
+# nvidia-settings -q CurrentMetaMode -t | grep -i forcecompositionpipeline || nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+#sleep 1
+#dockmode last
+

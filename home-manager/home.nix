@@ -19,6 +19,7 @@
   # environment.
   home.packages = [
     # pkgs is the set of all packages in the default home.nix implementation
+    pkgs.alacritty
     pkgs.btop
     pkgs.cargo
     pkgs.cmake
@@ -63,17 +64,10 @@
       source = ../dotfiles/btop;
       recursive = true;
     };
-    # ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/david/nix-setup/dotfiles/nvim";
     ".config/.zshrc" = {
       source = ../dotfiles/.zshrc;
       recursive = true;
     };
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   home.activation = {
