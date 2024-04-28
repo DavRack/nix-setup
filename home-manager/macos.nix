@@ -5,8 +5,7 @@
   home.packages = [
     pkgs.yabai
     pkgs.skhd
-  ] ++ home.packages;
-
+  ];
 
   home.file = {
     ".config/yabai" = {
@@ -18,5 +17,5 @@
       source = ../dotfiles/skhd;
       recursive = true;
     };
-  } ++ home.file;
+  };
 }

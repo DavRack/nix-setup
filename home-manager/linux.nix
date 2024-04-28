@@ -6,7 +6,7 @@
     pkgs.bspwm
     pkgs.sxhkd
     pkgs.flameshot
-  ] ++ home.packages;
+  ];
 
   home.file = {
     ".config/bspwm" = {
@@ -18,5 +18,5 @@
       source = ../dotfiles/sxkhd;
       recursive = true;
     };
-  } ++ home.file;
+  };
 }
