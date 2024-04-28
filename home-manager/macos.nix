@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ "./home.nix" ];
+  imports = [ "./base.nix" ];
 
   home.packages = [
     pkgs.yabai
