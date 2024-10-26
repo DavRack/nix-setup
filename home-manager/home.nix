@@ -8,8 +8,8 @@
 
 	imports = [
 		] 
-			++ (if builtins.env.SYSTEM_TYPE == "Darwin" then [ ./macos.nix ] else [] fi)
-			++ (if builtins.env.SYSTEM_TYPE == "GNU/Linux" then [ ./linux.nix ] else [] fi);
+			++ (if builtins.env.SYSTEM_TYPE == "Darwin" then [ "./macos.nix" ] else [])
+			++ (if builtins.env.SYSTEM_TYPE == "GNU/Linux" then [ "./linux.nix" ] else []);
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
