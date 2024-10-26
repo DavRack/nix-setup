@@ -6,12 +6,10 @@
   home.username = "david";
   home.homeDirectory = "/home/david";
 
-  systemType = builtins.env.SYSTEM_TYPE;
-
-imports = [
-  ] 
-		++ (if systemType == "Darwin" then [ ./macos.nix ] else [] fi)
-		++ (if systemType == "GNU/Linux" then [ ./linux.nix ] else [] fi);
+	imports = [
+		] 
+			++ (if builtins.env.SYSTEM_TYPE == "Darwin" then [ ./macos.nix ] else [] fi)
+			++ (if builtins.env.SYSTEM_TYPE == "GNU/Linux" then [ ./linux.nix ] else [] fi);
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
