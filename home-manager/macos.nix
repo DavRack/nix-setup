@@ -1,7 +1,5 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ "./base.nix" ];
-
   home.packages = [
     pkgs.yabai
     pkgs.skhd
