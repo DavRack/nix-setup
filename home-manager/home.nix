@@ -69,17 +69,21 @@
       source = ../dotfiles/btop;
       recursive = true;
     };
-    ".config/.zshrc" = {
+    ".zshrc" = {
       source = ../dotfiles/.zshrc;
+      recursive = true;
+    };
+    ".config/nvim" = {
+      source = config.lib.file.mkOutOfStoreSymlink ../dotfiles/nvim;
       recursive = true;
     };
   };
 
-  home.activation = {
-    setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf /home/david/nix-setup/dotfiles/nvim ~/.config/nvim
-    '';
-  };
+  # home.activation = {
+  #   setupNvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #     ln -sf /home/david/nix-setup/dotfiles/nvim ~/.config/nvim
+  #   '';
+  # };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
