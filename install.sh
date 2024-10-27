@@ -9,6 +9,9 @@ url="https://nixos.org/nix/install"
 install_command="$command $url"
 
 # get sudo permissions
+echo "######################################################################"
+echo "# The install script has been downloaded, asking for sudo to run nix #"
+echo "######################################################################"
 sudo echo "Got sudo"
 
 
