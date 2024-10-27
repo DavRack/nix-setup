@@ -8,6 +8,9 @@ url="https://nixos.org/nix/install"
 
 install_command="$command $url"
 
+# get sudo permissions
+sudo echo "Got sudo"
+
 
 if [ $system == "GNU/Linux" ]; then
   sh <(eval $install_command) --daemon --yes
