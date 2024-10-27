@@ -4,7 +4,7 @@ lsp_servers = {
         --"snyk_ls", -- All
         -- "ast_grep", -- ast-grep
 --        "awk_ls", -- AWK
-        "als", -- Ada
+        -- "als", -- Ada
         "angularls", -- Angular
         "ansiblels", -- Ansible
         "antlersls", -- Antlers
@@ -12,7 +12,7 @@ lsp_servers = {
         "arduino_language_server", -- Arduino
         "asm_lsp", -- Assembly (GAS/NASM, GO)
         "astro", -- Astro
-        "azure_pipelines_ls", -- Azure Pipelines
+        -- "azure_pipelines_ls", -- Azure Pipelines
         "bashls", -- Bash
         "pkgbuild_language_server", -- Bash
         "beancount", -- Beancount
@@ -56,7 +56,7 @@ lsp_servers = {
         "flux_lsp", -- Flux
         "foam_ls", -- Foam (OpenFOAM)
         "fortls", -- Fortran
-        "gleam", -- Gleam
+        -- "gleam", -- Gleam
         "glint", -- Glint
         "gopls", -- Go
         "gradle_ls", -- Gradle
@@ -71,7 +71,7 @@ lsp_servers = {
         "helm_ls", -- Helm
         "hoon_ls", -- Hoon
         --"biome", -- JSON
-        "tsserver",
+       "tsserver",
 --        "java_language_server", -- Java
         "jsonnet_ls", -- Jsonnet
         "julials", -- Julia (docs)
@@ -117,6 +117,7 @@ lsp_servers = {
 --        "ruby_ls", -- Ruby
 --        "salt_ls", -- Salt
 --        "theme_check", -- Shopify Theme Check
+	      "rust_analyzer",
         "slint_lsp", -- Slint
         "smithy_ls", -- Smithy
         "solang", -- Solidity
@@ -144,6 +145,7 @@ lsp_servers = {
         "wgsl_analyzer", -- WGSL
         "lemminx", -- XML
         "yamlls", -- YAML
+        -- "gitlab_ci_ls",
         "zls", -- Zig
 }
 return {

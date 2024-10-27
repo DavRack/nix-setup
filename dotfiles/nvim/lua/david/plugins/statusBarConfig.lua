@@ -27,6 +27,7 @@ return {
 				},
 				lualine_b = {getProjectName, 'branch', 'diff', 'diagnostics' },
 				lualine_c = { {'filename', path = 1} },
+				lualine_d = {},
 				lualine_x = {},
 				lualine_y = { 'filetype' },
 				lualine_z = {

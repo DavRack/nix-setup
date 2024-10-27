@@ -24,6 +24,7 @@ set.showtabline=2
 
 set.foldmethod = "expr"
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
+set.foldlevel=99
 
 -- Helper functional wrapper for mapping custom keybindings
 function Map(mode, lhs, rhs, opts)
