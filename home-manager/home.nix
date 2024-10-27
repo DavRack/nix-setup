@@ -39,7 +39,7 @@
     # pkgs.gnumake
     # pkgs.go
     pkgs.jq
-    # pkgs.neovim
+    pkgs.neovim
     # pkgs.nodejs
     # pkgs.python3
     # pkgs.ripgrep
