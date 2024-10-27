@@ -13,7 +13,7 @@
     };
 
     ".config/sxkhd" = {
-      source = ../dotfiles/sxkhd;
+      source = ../dotfiles/sxhkd;
       recursive = true;
     };
   };

@@ -10,9 +10,9 @@ install_command="$command $url"
 
 
 if [ $system == "GNU/Linux" ]; then
-  sh <(eval $install_command) --daemon
+  sh <(eval $install_command) --daemon --yes
 elif [ $system == "Darwin" ]; then
-  sh <(eval $install_command)
+  sh <(eval $install_command) --yes
 else
   # get arch
   arch=$(uname -m)
