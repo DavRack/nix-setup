@@ -7,11 +7,8 @@
   home.homeDirectory = "/home/david";
 
 	imports = [
-		] 
-			++ (if lib.strings.hasInfix "LinuxGui"  (builtins.getEnv "MODULES") then [ ./linuxgui.nix ] else [])
-			++ (if lib.strings.hasInfix "LinuxNas"  (builtins.getEnv "MODULES") then [ ./linuxnas.nix ] else [])
-			++ (if lib.strings.hasInfix "Darwin"    (builtins.getEnv "MODULES") then [ ./macos.nix ] else [])
-			++ (if lib.strings.hasInfix "GNU/Linux" (builtins.getEnv "MODULES") then [ ./linux.nix ] else []);
+		builtins.getEnv "MODULES"
+	]; 
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

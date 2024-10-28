@@ -13,12 +13,7 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 
 
-system=$(uname -o)
-
 rm -rf ~/.config/home-manager
 ln -s ~/nix-setup/home-manager ~/.config/
 
-MODULES_VALUE="$system"
-
-MODULES=$MODULES_VALUE home-manager switch -j 16
-
+bash update_home.sh
