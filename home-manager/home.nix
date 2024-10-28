@@ -8,6 +8,8 @@
 
 	imports = [
 		] 
+			++ (if lib.strings.hasInfix "LinuxGui"  (builtins.getEnv "MODULES") then [ ./linuxgui.nix ] else [])
+			++ (if lib.strings.hasInfix "LinuxNas"  (builtins.getEnv "MODULES") then [ ./linuxnas.nix ] else [])
 			++ (if lib.strings.hasInfix "Darwin"    (builtins.getEnv "MODULES") then [ ./macos.nix ] else [])
 			++ (if lib.strings.hasInfix "GNU/Linux" (builtins.getEnv "MODULES") then [ ./linux.nix ] else []);
 
