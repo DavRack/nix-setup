@@ -45,6 +45,9 @@
     pkgs.tmux
     pkgs.tree
     pkgs.zsh
+    pkgs.curl
+		pkgs.unzip
+		pkgs.nodejs
     # pkgs.nerdfonts
     pkgs.fontconfig
   ];
