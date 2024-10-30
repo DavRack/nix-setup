@@ -23,32 +23,30 @@
   # environment.
   home.packages = [
     # pkgs is the set of all packages in the default home.nix implementation
-    # pkgs.alacritty
-    # pkgs.btop
-    # pkgs.cargo
-    # pkgs.cmake
-    # pkgs.coreutils-full
-    # pkgs.curl
-    # pkgs.docker
-    # pkgs.exiftool
-    # pkgs.fd
-    # pkgs.fzf
-    # pkgs.gcc
-    # pkgs.git
-    # pkgs.gnumake
-    # pkgs.go
+    pkgs.btop
+    pkgs.cargo
+    pkgs.cmake
+    pkgs.coreutils-full
+    pkgs.curl
+    pkgs.docker
+    pkgs.exiftool
+    pkgs.fd
+    pkgs.fzf
+    pkgs.gcc
+    pkgs.git
+    pkgs.gnumake
+    pkgs.go
     pkgs.jq
     pkgs.neovim
-    # pkgs.nodejs
-    # pkgs.python3
-    # pkgs.ripgrep
-    # pkgs.rust-analyzer
-    # pkgs.silver-searcher
-    # pkgs.tmux
-    # pkgs.tree
-    # pkgs.zsh
+    pkgs.python3
+    pkgs.ripgrep
+    pkgs.rust-analyzer
+    pkgs.silver-searcher
+    pkgs.tmux
+    pkgs.tree
+    pkgs.zsh
     # pkgs.nerdfonts
-    # pkgs.fontconfig
+    pkgs.fontconfig
   ];
 
   fonts.fontconfig.enable = true;

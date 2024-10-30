@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   home.packages = [
+    pkgs.alacritty
     pkgs.bspwm
     pkgs.sxhkd
     pkgs.flameshot
