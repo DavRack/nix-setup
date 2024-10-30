@@ -46,9 +46,9 @@
     pkgs.tree
     pkgs.zsh
     pkgs.curl
-		pkgs.unzip
-		pkgs.nodejs
-		pkgs.opam
+    pkgs.unzip
+    pkgs.nodejs
+    pkgs.opam
     # pkgs.nerdfonts
     pkgs.fontconfig
   ];
