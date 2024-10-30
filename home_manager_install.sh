@@ -16,4 +16,4 @@ nix-shell '<home-manager>' -A install
 rm -rf ~/.config/home-manager
 ln -s ~/nix-setup/home-manager ~/.config/
 
-bash update_home.sh
+bash ~/nix-setup/update_home.sh
