@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/david";
 
 	imports = [
-		builtins.getEnv "MODULES"
+		lib.strings.splitString "\n" (builtins.getEnv "MODULES")
 	]; 
 
   # This value determines the Home Manager release that your configuration is

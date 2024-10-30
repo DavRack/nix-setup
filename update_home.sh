@@ -11,9 +11,11 @@ if $install_editor; then
 fi
 
 home_modules=$(mktemp)
-ls -1 ~/nix-setup/home-manager/ > "$home_modules"
+cd ~/nix-setup/home-manager
+ls -1 > "$home_modules"
 vim "$home_modules"
-MODULES_VALUE=$(cat "$home_modules" | xargs -n1 realpath | xargs -n1 -I{} \"{}\")
+MODULES_VALUE=$(cat "$home_modules" | xargs -n1 realpath)
+cd
 
 echo "### modules to install ###"
 cat "$home_modules"
