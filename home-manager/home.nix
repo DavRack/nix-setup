@@ -49,7 +49,7 @@
     pkgs.unzip
     pkgs.nodejs
     pkgs.opam
-    # pkgs.nerdfonts
+    pkgs.nerdfonts
     pkgs.fontconfig
   ];
 
