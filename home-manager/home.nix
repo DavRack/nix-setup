@@ -49,7 +49,6 @@
     pkgs.unzip
     pkgs.nodejs
     pkgs.opam
-    pkgs.nerdfonts
     pkgs.fontconfig
   ];
 
